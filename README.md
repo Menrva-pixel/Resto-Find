@@ -34,7 +34,7 @@ This App serves to find restaurants around the city.
 Clone the project
 
 ```bash
-  git clone https://github.com/Menrva-pixel/RestoFind
+  git clone https://github.com/Menrva-pixel/Resto-Find
 ```
 
 Go to the project directory
