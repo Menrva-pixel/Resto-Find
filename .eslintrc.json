@@ -26,8 +26,7 @@
         "no-console": "off",
         "consistent-return": "off",
         "import/no-extraneous-dependencies": "off",
-        "no-useless-constructor": "off"
-
-
+        "no-useless-constructor": "off",
+        "eslint-disable no-undef": "off"
     }
 }
