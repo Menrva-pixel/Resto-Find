@@ -11,14 +11,26 @@ exports.config = {
   tests: 'e2e/**/*.spec.js',
   output: 'e2e/outputs',
   helpers: {
-    Playwright: {
+    Puppeteer: {
       url: 'localhost:9000',
       show: true,
-      browser: 'chromium',
+      windowSize: '1200x900',
     },
   },
   include: {
     I: './steps_file.js',
   },
   name: 'Resto-Find',
+  plugins: {
+    pauseOnFail: {},
+    retryFailedStep: {
+      enabled: true,
+    },
+    tryTo: {
+      enabled: true,
+    },
+    screenshotOnFail: {
+      enabled: true,
+    },
+  },
 };
