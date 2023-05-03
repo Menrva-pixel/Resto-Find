@@ -141,13 +141,13 @@ hero-element img {
   object-fit: cover;
 }
 
-.hero__heading {
+.banner-heading {
   font-size: 2.22em;
   font-family: 'merienda', serif;
   color: #ddac42;
 }
 
-.hero__tagline {
+.banner-tagline {
   font-size: 1.1em;
   font-style: italic;
 }

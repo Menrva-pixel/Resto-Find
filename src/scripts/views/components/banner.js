@@ -9,7 +9,7 @@ class HeroElement extends HTMLElement {
   }
 
   _render() {
-    this.innerHTML = /* html */ `
+    this.innerHTML = `
       <picture>
         ${this._createSourceElement(heroImage, 'jpeg')}
         ${this._createSourceElement(heroImageWebp, 'webp')}
@@ -21,8 +21,8 @@ class HeroElement extends HTMLElement {
           alt="Banner Image"
         />
       </picture>
-      <h1 class="hero__heading">Temukan Restaurant Terbaik Di Kota</h1>
-      <p class="hero__tagline">"Where food and memories are made"</p>
+      <h1 class="banner-heading">Temukan Restaurant Terbaik Di Kota</h1>
+      <p class="banner-tagline">"Where food and memories are made"</p>
     `;
   }
 
