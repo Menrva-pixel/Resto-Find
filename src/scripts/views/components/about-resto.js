@@ -71,7 +71,7 @@ class AboutResto extends HTMLElement {
   
    
     <div class="about-us">
-    <img src="${heroImage.src}" alt="banner 4">
+    <img src="${heroImage.src}" alt="banner 4" loading="lazy">
       <div class="about-text">
         <h1>RestoFind</h1>
         <p>Restoran adalah tempat yang nyaman dan menyenangkan untuk menikmati makanan enak dengan keluarga dan teman. Kami menyediakan berbagai macam hidangan dari berbagai masakan yang disajikan dengan bahan-bahan segar dan berkualitas tinggi. Selain itu, kami juga mengutamakan pelayanan yang ramah dan profesional untuk memberikan pengalaman makan yang terbaik bagi pelanggan kami.
