@@ -143,8 +143,8 @@ class FooterInfo extends HTMLElement {
             }
             
             .footer-info .social img {
-              width: 20px;
-              height: 20px;
+              width: 50px;
+              height: 50px;
             }
             
             .footer-info .sponsor-logos li {

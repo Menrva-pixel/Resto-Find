@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
-import heroImage from '../../../public/images/hero/hero-image_4.webp';
+import heroImage from '../../../public/images/hero/hero-image_4.jpg?sizes[]=425,sizes[]=768,sizes[]=1024,sizes[]=135';
 
 class AboutResto extends HTMLElement {
   constructor() {
@@ -9,60 +10,70 @@ class AboutResto extends HTMLElement {
     const About = `
       <style>
       .about-us {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 30px;
-        background-color: #333;
-        margin: 0px;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      .about-us img {
+        max-width: 100%;
+        height: auto;
+        width: 50%;
+        max-height: 500px;
+        border-radius: 5px;
       }
       
       .about-text {
-        padding: 120px;
-      }
-
-      @media only screen and (max-width: 1200px) {
-       .about-us {
-        display: flex;
-        flex-direction: column;
-        margin-top: 0px;
-        width: auto;
-       }
-
-       .about-text {
-        padding: 5px;
-       }
-
-       p {
-        margin: 10px;
-       }
-    }
-      
-      img {
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-        border-radius: 10px;
-        filter: brightness(1.1) sepia(0.43);
-      }
-      
-      h1 {
-        font-family: 'Merienda', cursive;
-        color: #ddac42;
-        font-size: 5em;
-        margin-bottom: 50px;
-      }
-      
-      p {
-        color: #dfdfdf;
-        font-size: 18px;
-        font-weight: 200;
+        margin-top: 20px;
         text-align: justify;
+        color: #dfdfdf;
         word-break: break-all;
       }
       
-      p::first-letter {
-          margin-left:1.3em;
+      .about-text h1 {
+        font-size: 2.5rem;
+        color: #ddac42 !important;
+        font-family: "merienda", serif;
+      }
+      
+      .about-text p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      
+      @media (min-width: 768px) {
+        .about-us {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          text-align: left;
+        }
+          
+        .about-text {
+          max-width: 50%;
+          margin-left: 20px;
+        }
+      
+        .about-text h1 {
+          font-size: 3.5rem;
+        }
+      
+        .about-text p {
+          font-size: 1.1rem;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .about-text h1 {
+          text-align: center;
+        }
+
+        .about-us img {
+          width: 100%;
+          border-radius: 10px;
+        }
       }
       
   
