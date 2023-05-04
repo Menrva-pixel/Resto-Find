@@ -1,7 +1,6 @@
-
 # RestoFind
 
-a Restaurant Finder
+a Restaurant Finder 
 
 # About the project
 
@@ -10,7 +9,7 @@ a Restaurant Finder
 
 ![Logo](https://i.ibb.co/Wx4tZ2j/restofind.jpg)
 
-
+Deployment Status : [![Netlify Status](https://api.netlify.com/api/v1/badges/9dd9ca29-a5a8-4830-befd-37da7e5002ad/deploy-status)](https://app.netlify.com/sites/resto-find/deploys)
 ## Project information
 
 This project was made to complete the "Expert Front-end Developer" class submission assignment at **Dicoding Academy**.
