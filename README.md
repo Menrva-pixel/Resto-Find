@@ -60,6 +60,15 @@ development mode :
 create local server :
   npm run serve
 ```
+End-to-End Testing
+
+```bash
+create local server :
+node server.js
+
+test command :
+npm run e2e
+```
 
 
 ## License
