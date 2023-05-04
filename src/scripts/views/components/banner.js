@@ -29,14 +29,12 @@ class HeroElement extends HTMLElement {
   _createSourceElement({ images }, type) {
     let elements = '';
     images.forEach(({ path, width }, index) => {
-      elements += /* html */ `
-        <source
-          media=${(index < images.length - 1)
-    ? `'(max-width: ${width}px)'`
-    : `'(min-width: ${images[index - 1].width}px)'`}
-          srcset="${path}"
-          type="image/${type}">
-      `;
+      const mediaQuery = index < images.length - 1
+        ? `(max-width: ${width}px)`
+        : `(min-width: ${images[index - 1].width}px)`;
+      const sourceTag = `<source media="${mediaQuery}" srcset="${path}" type="image/${type}">`;
+
+      elements += sourceTag;
     });
     return elements;
   }
