@@ -39,7 +39,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd RestoFind
+  cd Project Directory (RestoFind / Resto-Find)
 ```
 
 Install dependencies
