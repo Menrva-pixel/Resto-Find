@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
-import heroImage from '../../../public/hero-image/hero-image_4-large.jpg?sizes[]=425,sizes[]=768,sizes[]=1024,sizes[]=135';
+import heroImage from '../../../public/images/hero/hero-image_4.webp?sizes[]=425,sizes[]=768,sizes[]=1024,sizes[]=135';
 
 class AboutResto extends HTMLElement {
   constructor() {
