@@ -22,7 +22,8 @@ class AboutResto extends HTMLElement {
         height: auto;
         width: 50%;
         max-height: 500px;
-        border-radius: 5px;
+        border-radius: 10px;
+        padding: 40px;
       }
       
       .about-text {

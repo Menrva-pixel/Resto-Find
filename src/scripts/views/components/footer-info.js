@@ -185,7 +185,7 @@ class FooterInfo extends HTMLElement {
               <ul class="social">
                 <li><a href="https://github.com/Menrva-pixel" target="_blank"><img src="https://img.icons8.com/fluency/48/null/github.png" alt="GitHub"></a></li>
                 <li><a href="https://www.linkedin.com/in/barkah-herdyanto-sejati-636840258" target="_blank"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png" alt="LinkedIn"></a></li>
-                <li><a href="https://www.instagram.com/herdyanto26n" target="_blank"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="Instagram"></a></li>
+                <li><a href="https://www.instagram.com/herdyanto26" target="_blank"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="Instagram"></a></li>
               </ul>
           </div>
           <div slot="sponsor">
