@@ -171,7 +171,7 @@ class FooterInfo extends HTMLElement {
         <div class="footer-info">
           <div slot="logo">
               <ul>
-              <li><img src="${logoImage.src}" alt="Logo"></li>
+              <li><img src="${logoImage.src}" alt="Logo" loading="lazy"></li>
               <li><a>Restofind</a></li>
               </ul>
           </div>
@@ -191,8 +191,8 @@ class FooterInfo extends HTMLElement {
           <div slot="sponsor">
             <h3>Sponsored By</h3>
                 <ul class="sponsor-logos">
-                <li><img src="${sponsor1.src}" alt="Fake Sponsor 1"></li>
-                <li><img src="${sponsor2.src}" alt="Fake Sponsor 2"></li>
+                <li><img src="${sponsor1.src}" alt="Fake Sponsor 1" loading="lazy"></li>
+                <li><img src="${sponsor2.src}" alt="Fake Sponsor 2" loading="lazy"></li>
                 </ul>
           </div>
         </div>
