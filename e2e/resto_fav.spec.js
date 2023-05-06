@@ -6,15 +6,16 @@ const assert = require('assert');
 Scenario('Add and Remove Restaurant from Favorite List', async ({ I }) => {
   // Go to home page
   I.amOnPage('/');
-  I.seeElement('.restaurant');
 
+  // ambil CTA-nya agar bisa navigasi
+  const firstRestaurantCTA = locate('.restaurant-button').first();
   const firstRestaurant = locate('.restaurant-name').first();
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
-  I.click(firstRestaurant);
+  I.click(firstRestaurantCTA);
 
   // tambah resto ke dalam list favorit
-  I.seeElement('#favorite-button');
-  I.click('#favorite-button');
+  I.waitForElement('#fav-button');
+  I.click('#fav-button');
 
   // Go to favorite page
   I.amOnPage('/#/favorite');
@@ -25,8 +26,14 @@ Scenario('Add and Remove Restaurant from Favorite List', async ({ I }) => {
   const savedRestaurantName = await I.grabTextFrom(savedRestaurant);
   assert.strictEqual(firstRestaurantName, savedRestaurantName);
 
+  // di click dulu confirmation dialog-nya
+  I.click('.confirm-button');
+
+  const favoritedRestaurantCTA = locate('.restaurant-button').first();
+  I.click(favoritedRestaurantCTA);
+
   // hapus resto dari dari daftar favorit
-  I.click('#favorite-button');
+  I.click('#fav-button');
 
   // cek apakah resto tidak dalam daftar favorit
   I.dontSeeElement('.restaurant');
