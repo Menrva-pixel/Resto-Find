@@ -7,7 +7,7 @@ Scenario('Add and Remove Restaurant from Favorite List', async ({ I }) => {
   // Go to home page
   I.amOnPage('/');
 
-  // ambil CTA-nya agar bisa navigasi
+  // navigation CTA
   const firstRestaurantCTA = locate('.restaurant-button').first();
   const firstRestaurant = locate('.restaurant-name').first();
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
@@ -18,6 +18,8 @@ Scenario('Add and Remove Restaurant from Favorite List', async ({ I }) => {
   I.click('#fav-button');
 
   // Go to favorite page
+  I.say('Uji coba favorite button');
+  I.wait(3);
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant');
 
@@ -37,4 +39,6 @@ Scenario('Add and Remove Restaurant from Favorite List', async ({ I }) => {
 
   // cek apakah resto tidak dalam daftar favorit
   I.dontSeeElement('.restaurant');
+
+  I.say('Test berhasil!');
 });
