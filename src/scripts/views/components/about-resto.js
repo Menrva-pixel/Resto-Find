@@ -74,6 +74,7 @@ class AboutResto extends HTMLElement {
         .about-us img {
           width: 100%;
           border-radius: 10px;
+          padding: 0;
         }
       }
       
