@@ -1,12 +1,12 @@
 import {
-  LIKE_BUTTON_TEMPLATE,
-  UNLIKE_BUTTON_TEMPLATE,
-} from '../views/templates/like-button-layout';
+  FAV_BUTTON_TEMPLATE,
+  UNFAV_BUTTON_TEMPLATE,
+} from '../views/templates/fav-button-template';
 import { INIT_SWAL_SUCCESS, INIT_SWAL_ERROR } from './swal-initiator';
 
-const LIKE_BUTTON_PRESENTER = {
-  async init({ likeButtonContainer, data, favoriteResto }) {
-    this._likeButtonContainer = likeButtonContainer;
+const FAV_BUTTON_PRESENTER = {
+  async init({ favButtonContainer, data, favoriteResto }) {
+    this._favButtonContainer = favButtonContainer;
     this._resto = data.restaurant;
     this._favoriteResto = favoriteResto;
 
@@ -21,9 +21,9 @@ const LIKE_BUTTON_PRESENTER = {
       const data = await this._favoriteResto.getResto(id);
 
       if (data) {
-        this._renderUnlikeButtonTemplate();
+        this._renderUnfavButtonTemplate();
       } else {
-        this._renderLikeButtonTemplate();
+        this._renderFavButtonTemplate();
       }
     } catch (error) {
       console.error(error);
@@ -33,12 +33,12 @@ const LIKE_BUTTON_PRESENTER = {
     }
   },
 
-  _renderLikeButtonTemplate() {
-    this._likeButtonContainer.innerHTML = LIKE_BUTTON_TEMPLATE();
+  _renderFavButtonTemplate() {
+    this._favButtonContainer.innerHTML = FAV_BUTTON_TEMPLATE();
 
-    const likeButton = document.querySelector('#likeButton');
+    const favButton = document.querySelector('#favButton');
 
-    likeButton.addEventListener('click', async () => {
+    favButton.addEventListener('click', async () => {
       await this._favoriteResto.addResto(this._resto);
 
       INIT_SWAL_SUCCESS('Restoran telah disimpan!');
@@ -46,12 +46,12 @@ const LIKE_BUTTON_PRESENTER = {
     });
   },
 
-  _renderUnlikeButtonTemplate() {
-    this._likeButtonContainer.innerHTML = UNLIKE_BUTTON_TEMPLATE();
+  _renderUnfavButtonTemplate() {
+    this._favButtonContainer.innerHTML = UNFAV_BUTTON_TEMPLATE();
 
-    const likeButton = document.querySelector('#likeButton');
+    const favButton = document.querySelector('#favButton');
 
-    likeButton.addEventListener('click', async () => {
+    favButton.addEventListener('click', async () => {
       await this._favoriteResto.delRestaurant(this._resto.id);
 
       INIT_SWAL_SUCCESS('Restoran belum disimpan!');
@@ -61,4 +61,4 @@ const LIKE_BUTTON_PRESENTER = {
 
 };
 
-export default LIKE_BUTTON_PRESENTER;
+export default FAV_BUTTON_PRESENTER;

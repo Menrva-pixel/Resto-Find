@@ -14,12 +14,12 @@ Scenario('Add and Remove Restaurant from Favorite List', async ({ I }) => {
   I.click(firstRestaurantCTA);
 
   // tambah resto ke dalam list favorit
+  I.say('Uji coba favorite/unfavorite button');
+  I.wait(2);
   I.waitForElement('#fav-button');
   I.click('#fav-button');
 
   // Go to favorite page
-  I.say('Uji coba favorite button');
-  I.wait(3);
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant');
 
