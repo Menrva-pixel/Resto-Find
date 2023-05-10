@@ -66,7 +66,11 @@ create local server :
 node server.js
 
 test command :
+codeceptJs
 npm run e2e
+
+Integration Test
+npm run test
 ```
 
 
